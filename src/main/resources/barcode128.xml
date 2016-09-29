@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<barcode>
+    <code128>
+        <height>30mm</height>
+        <module-width>0.5mm</module-width>
+        <human-readable>
+            <font-size>8pt</font-size>
+        </human-readable>
+    </code128>
+</barcode>
