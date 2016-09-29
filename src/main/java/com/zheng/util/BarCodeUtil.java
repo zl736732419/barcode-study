@@ -32,7 +32,7 @@ import org.w3c.dom.DocumentFragment;
 import com.google.common.io.Resources;
 
 /**
- * 条码工具生成器 最后生成png格式的图片文件 Created by zhenglian on 2016/9/29.
+ * 条码工具生成器
  */
 public class BarCodeUtil {
 	public static void create(String msg, String name) throws Exception {
@@ -49,7 +49,7 @@ public class BarCodeUtil {
 
 	}
 
-	private static void eps(BarcodeGenerator gen, String msg) throws Exception {
+	public static void eps(BarcodeGenerator gen, String msg) throws Exception {
 		OutputStream out = new java.io.FileOutputStream(new File("D:/images/output.eps"));
 		EPSCanvasProvider provider = new EPSCanvasProvider(out, 0);
 		gen.generateBarcode(provider, msg);
@@ -65,7 +65,7 @@ public class BarCodeUtil {
 	 * @param msg
 	 * @throws Exception
 	 */
-	private static void bitmaps(BarcodeGenerator gen, String msg, String name) throws Exception {
+	public static void bitmaps(BarcodeGenerator gen, String msg, String name) throws Exception {
 		OutputStream out = new FileOutputStream(new File("D:/images/output.png"));
 		BitmapCanvasProvider provider = new BitmapCanvasProvider(out, "image/x-png", 300, BufferedImage.TYPE_BYTE_GRAY,
 				true, 0);
@@ -108,7 +108,7 @@ public class BarCodeUtil {
 	 * @param msg
 	 * @throws BarcodeCanvasSetupException
 	 */
-	private static void svg(BarcodeGenerator gen, String msg) throws Exception {
+	public static void svg(BarcodeGenerator gen, String msg) throws Exception {
 		// w3c
 		SVGCanvasProvider provider = new SVGCanvasProvider(false, 0);
 		gen.generateBarcode(provider, msg);

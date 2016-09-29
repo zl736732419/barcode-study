@@ -27,6 +27,24 @@
         </dependency>
         
         <dependency>
+		    <groupId>com.google.zxing</groupId>
+		    <artifactId>core</artifactId>
+		    <version>3.2.0</version>
+		</dependency>
+		<dependency>  
+            <groupId>com.google.zxing</groupId>  
+            <artifactId>javase</artifactId>  
+            <version>3.2.0</version>  
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.1.29</version>
+        </dependency>
+
+
+        <dependency>
 		    <groupId>org.apache.avalon.framework</groupId>
 		    <artifactId>avalon-framework-impl</artifactId>
 		    <version>4.3.1</version>
@@ -43,9 +61,21 @@
             <artifactId>guava</artifactId>
             <version>19.0</version>
         </dependency>
-
     </dependencies>
     <build>
         <finalName>barcode-study</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+
     </build>
 </project>
