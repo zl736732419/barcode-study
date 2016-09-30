@@ -12,9 +12,9 @@ import java.io.IOException;
  */
 public class Application {
     public static void main(String[] args) throws Exception {
-//    	new Application().createBarCode();
+    	new Application().createBarCode();
 //        new Application().createQR();
-        new Application().parseQR();
+//        new Application().parseQR();
     }
 
     private void parseQR() throws IOException {
@@ -29,8 +29,8 @@ public class Application {
     }
 
     private void createBarCode() throws Exception {
-        String msg = "123456789";
-        String name = "小张";
+        String msg = "1234567890";
+        String name = "老王";
         BarCodeUtil.create(msg, name);
     }
 
